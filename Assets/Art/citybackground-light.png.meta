@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 239e7f069ebb37f49a629abc5a5896e4
-timeCreated: 1443980815
+timeCreated: 1443987841
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: background_1
     21300002: background_2
     21300004: background_3
+    21300006: backgroundbase
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -80,6 +81,16 @@ TextureImporter:
         y: 3
         width: 175
         height: 498
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundbase
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 341
+        width: 10
+        height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

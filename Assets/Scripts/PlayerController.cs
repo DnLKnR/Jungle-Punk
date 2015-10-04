@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void FixedUpdate(){
-		
+		//Check is player is touching the ground
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 	}
 	// Update is called once per frame

@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 20afd10c02d14e54583e80610ddeeea0
-timeCreated: 1443984679
+guid: cd32c8c0058a96342a9182dd5d814490
+timeCreated: 1443997222
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: backgroundmid_1
-    21300002: backgroundmid_2
-    21300004: backgroundmid_3
+    21300000: Rat_Idle
+    21300002: Rat_Walk_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,33 +52,23 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: backgroundmid_1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 552
-        width: 684
-        height: 286
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: backgroundmid_2
+    - name: Rat_Idle
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 360
-        height: 336
+        y: 6
+        width: 408
+        height: 663
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: backgroundmid_3
+    - name: Rat_Walk_1
       rect:
         serializedVersion: 2
-        x: 532
-        y: 4
-        width: 172
-        height: 497
+        x: 488
+        y: 3
+        width: 535
+        height: 609
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

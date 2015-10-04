@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 4505e3d3644e7a04f821f6682afd408b
-timeCreated: 1443937552
+guid: 40d04ed96a17b744b8120447e26f11b9
+timeCreated: 1443995808
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Ground_1
-    21300002: Ground_2
+    21300000: Pig_Idle
+    21300002: Pig_Walk_1
+    21300004: Pig_Walk_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,23 +53,33 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Ground_1
+    - name: Pig_Idle
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 48
-        height: 48
+        x: 0
+        y: 12
+        width: 392
+        height: 659
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground_2
+    - name: Pig_Walk_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 50
-        width: 48
-        height: 48
+        x: 476
+        y: 6
+        width: 364
+        height: 639
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pig_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 6
+        width: 355
+        height: 639
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

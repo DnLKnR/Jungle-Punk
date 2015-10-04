@@ -6,11 +6,14 @@ public class LevelManager : MonoBehaviour {
 	public GameObject spawnPoint;
 	
 	private PlayerController player;
-	
+
+	public HealthManager healthManager;
 	// Use this for initialization
 	void Start () {
 		//Get PlayerController Object that already exists in the scene
 		player = FindObjectOfType<PlayerController>();
+
+		healthManager = FindObjectOfType<HealthManager>();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +28,9 @@ public class LevelManager : MonoBehaviour {
 		Debug.Log ("Player Respawn");
 		//Turn player back on
 		TogglePlayer(true);
+		//Reset the players health
+		healthManager.Reset();
+		healthManager.isDead = false;
 	}
 	
 	public void TogglePlayer(bool isEnabled){
