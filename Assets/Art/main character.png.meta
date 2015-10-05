@@ -1,0 +1,89 @@
+fileFormatVersion: 2
+guid: 9a0a109e8d48057488dca9f2b466446c
+timeCreated: 1444007305
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Player_Idle
+    21300002: Player_Running_1
+    21300004: Player_Running_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Player_Idle
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 0
+        width: 708
+        height: 2054
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 3, y: 0, z: 0, w: 0}
+    - name: Player_Running_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 1007
+        height: 2053
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Running_2
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 0
+        width: 1105
+        height: 2050
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 151, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

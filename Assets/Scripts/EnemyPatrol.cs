@@ -2,8 +2,11 @@
 using System.Collections;
 
 public class EnemyPatrol : MonoBehaviour {
-	
+
+	public Rigidbody2D rigidBody2D;
+
 	public float moveSpeed;
+	public float backSpeed;
 	public bool moveRight;
 	
 	public Transform wallCheck;
@@ -16,7 +19,7 @@ public class EnemyPatrol : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+		rigidBody2D = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -32,14 +35,20 @@ public class EnemyPatrol : MonoBehaviour {
 		
 		Rigidbody2D rigidBody2D = GetComponent<Rigidbody2D>();
 		float x = transform.localScale.x;
-
+		ParticleSystem particleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
 		if (moveRight) {
+			if(particleSystem != null){
+				particleSystem.enableEmission = false;
+			}
 			if(x > 0){
 				x = -x;
 			}
 			transform.localScale = new Vector3(x,transform.localScale.y,transform.localScale.z);
-			rigidBody2D.velocity = new Vector2 (moveSpeed, rigidBody2D.velocity.y);
+			rigidBody2D.velocity = new Vector2 (backSpeed, rigidBody2D.velocity.y);
 		} else {
+			if(particleSystem != null){
+				particleSystem.enableEmission = true;
+			}
 			if(x < 0){
 				x = -x;
 			}

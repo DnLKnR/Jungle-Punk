@@ -13,11 +13,17 @@ public class PlayerController : MonoBehaviour {
 	public float groundCheckRadius;
 	public LayerMask whatIsGround;
 	private bool grounded;
-	
+
+	private bool doubleJumped;
+
+	private Animator anim;
+
 	// Use this for initialization
 	void Start () {
 		//Get the rigidBody2D object
 		rigidBody2D = GetComponent<Rigidbody2D>();
+
+		anim = GetComponent<Animator>();
 	}
 	
 	void FixedUpdate(){
@@ -31,8 +37,13 @@ public class PlayerController : MonoBehaviour {
 			//Check if the player is touching the ground
 			if (grounded) {
 				Jump();
+				doubleJumped = false;
+			} else if (!doubleJumped){
+				Jump();
+				doubleJumped = true;
 			}
 		}
+		anim.SetBool("Grounded", grounded);
 		//To prevent sliding, make sure to start at velocity 0
 		moveVelocity = 0f;
 		//Input.GetKey means "Key is Pressed", KeyCode.D == "D"
@@ -47,14 +58,20 @@ public class PlayerController : MonoBehaviour {
 		}
 		//move our player in the x-direction
 		Move(moveVelocity);
-		
+		float x = transform.localScale.x;
 		//If character is moving to the left, keep scale normal
 		if (rigidBody2D.velocity.x > 0) {
-			transform.localScale = new Vector3(1f, 1f, 1f);
+			if(x > 0){
+				x = -x;
+			}
+			transform.localScale = new Vector3(x,transform.localScale.y,transform.localScale.z);
 		} 
 		//If character is moving to the left, relect the player
 		else if (rigidBody2D.velocity.x < 0) {
-			transform.localScale = new Vector3(-1f, 1f, 1f);
+			if(x < 0){
+				x = -x;
+			}
+			transform.localScale =  new Vector3(x,transform.localScale.y,transform.localScale.z);
 		}
 	}
 	/* This function causes the player to jump when called */
@@ -69,5 +86,6 @@ public class PlayerController : MonoBehaviour {
 		float y = rigidBody2D.velocity.y;
 		//Use the Rigidbody2D that was created on our player, adjust his velocity in the x-direction
 		rigidBody2D.velocity = new Vector2(speed, y);
+		anim.SetFloat("Speed", Mathf.Abs(rigidBody2D.velocity.x));
 	}
 }
