@@ -9,15 +9,12 @@ public class HealthManager : MonoBehaviour {
 	public static int health;
 
 	public Slider healthBar;
-	//Text text;
-
 
 	public bool isDead;
 
 	private LevelManager levelManager;
 	// Use this for initialization
 	void Start () {
-		//text = GetComponent<Text> ();
 		healthBar = GetComponent<Slider>();
 
 		health = maxHealth;
@@ -33,8 +30,6 @@ public class HealthManager : MonoBehaviour {
 			levelManager.RespawnPlayer();
 			isDead = true;
 		}
-
-		//text.text = "" + health;
 		healthBar.value = health;
 	}
 	public static void Hurt(int damage){

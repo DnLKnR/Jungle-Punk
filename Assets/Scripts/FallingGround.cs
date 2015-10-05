@@ -7,9 +7,13 @@ public class FallingGround : MonoBehaviour {
 	//Number of seconds before ground starts falling
 	public float delay;
 
+	private Vector3 initialPosition;
+	private Quaternion initialRotation;
 	// Use this for initialization
 	void Start () {
 		ground = GetComponent<Rigidbody2D>();
+		initialPosition = gameObject.transform.position;
+		initialRotation = gameObject.transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -21,10 +25,13 @@ public class FallingGround : MonoBehaviour {
 			StartCoroutine("Fall");
 		}
 	}
-	/* Destroy the object when it leaves the map */
+	/* Reset the item after it leaves the map */
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Border"){
-			Destroy(gameObject);
+			ground.isKinematic = true;
+			//Reset platform position
+			gameObject.transform.position = initialPosition;
+			gameObject.transform.rotation = initialRotation;
 		}
 	}
 	/* Allow ground to fall after the delay */
