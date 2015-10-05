@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class KillPlayer : MonoBehaviour {
 	
@@ -22,6 +23,12 @@ public class KillPlayer : MonoBehaviour {
 		if (other.name == "Player") {
 			//Force player to Respawn
 			levelManager.RespawnPlayer();
+		}
+		if (other.name == "Boss") {
+			Text text = FindObjectOfType<Text>();
+			text.enabled = true;
+			Debug.Log ("You won!!! TODO: Implement winning the level");
+
 		}
 	}
 }
