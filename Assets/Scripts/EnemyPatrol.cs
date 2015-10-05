@@ -57,4 +57,9 @@ public class EnemyPatrol : MonoBehaviour {
 			rigidBody2D.velocity = new Vector2 (-moveSpeed, rigidBody2D.velocity.y);
 		}
 	}
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "Border") {
+			Debug.Log ("You Win!!! Boss fell off the map");
+		}
+	}
 }
